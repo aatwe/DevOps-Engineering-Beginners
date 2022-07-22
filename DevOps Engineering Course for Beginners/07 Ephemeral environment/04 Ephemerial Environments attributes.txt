@@ -1,0 +1,6 @@
+1) Prepopulated :  COntain representative, anonymized data to pass security audits
+
+2) Undoable      : If in course of review data is deleted, -> should be easy to reset database 	            to original state
+
+3) Migrated       : Database should use schema currently used in production
+	            Broken and non performant database migrations : common problems

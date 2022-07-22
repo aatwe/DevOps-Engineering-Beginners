@@ -1,0 +1,28 @@
+Live chat-example : open source version of slack used as demo repo throughtlout layerCI internal documentation
+
+
+
+For this open source version we want to run tests everytime developer proposes changes
+In pull request tab we can know if the change was good
+
+
+if dev changes color of website
+	
+dev goes to design file
+services -> web - src -> main ->main.css -> edit the color
+
+after making change
+dont commit to main , instead
+Create new branch -> Propose change -> Create pull request
+
+
+Without a CI system all we can see is he file change and description
+How to know if this will have negative sideeffects
+
+Or i can run the changes locally, evaluate , or ask dev to screenshare and walk through
+
+Very frictionful
+
+
+CI allows dev to set comprehensive tests
+lets check how to set up repository

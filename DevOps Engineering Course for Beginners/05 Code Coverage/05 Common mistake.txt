@@ -1,0 +1,8 @@
+too any tests for uncertain features
+
+For ex if you force developers to write 2-5 unit tests for every function
+makes them much slower
+
+
+Tests are never viewed by users
+Users only care about stability 

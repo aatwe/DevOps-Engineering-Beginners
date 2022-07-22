@@ -1,0 +1,14 @@
+Quantitatively measure of how comprehensive codebase tests are
+
+Code Coverage = total # of non-syntax lines with tests / total # of non-syntax lines
+
+
+Code coverage increases when stability increases and bugs reduce
+
+Code coverage graph =  graph of rectangles
+
+each reactangle = file
+color = how many tests
+
+Bright green = 100% file tested
+Bright red   = none of the file is tested

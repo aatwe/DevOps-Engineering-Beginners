@@ -1,0 +1,21 @@
+Go to LayerCI -> Install on Github Repository
+
+
+Setup configuration file on this repo
+This configuration file starts the stack, and run the tests on cypress as required
+
+
+Layer CI -> Choose Framework (Docker Compose Based)
+
+
+Build Layer File code
+   Install Docker 
+   Install Docker Compose 
+   Copy repo files into test runner	//COPY /  / root
+   Build all micro services		//RUN REPEATABLE docker-compose build --			 	  parallel
+   Start all microservices locally within test runner  //RUN docker -compose up -d
+   Run tests against them		//RUN docker compose      cypress    Get a set up script for this		bash/app/run_tests.sh
+   Deploy Pipeline  //skipped for now
+   
+
+COPY THIS ENTIRE CONFIGURATION CODE

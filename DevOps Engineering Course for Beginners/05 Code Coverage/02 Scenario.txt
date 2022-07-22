@@ -1,0 +1,35 @@
+we ahve a complicated code base
+wiht existing users
+
+we want to enforce tests are written so things are not broken
+
+For Ex
+
+let f = n => {
+  let x = "hello", result = [];
+  for(let i = 0; i< n; i++) {			//Branch lines //change flow
+	result.push(x+i);			//logic line //change behaviour
+	if(i%50 == 49) {
+	   result.push("50th: " +x+i)
+	}				//syntax lines //dont do anything
+}
+	return result;
+}
+
+
+
+Code Coverage = total # of non-syntax lines with tests / total # of non-syntax lines
+
+Consider test :
+
+it("should work for two". () => {
+ let expected = {"hello0", "hello1"};
+ assertEquals(f(2), expected);
+)
+
+//Since input = 2 , if statement  wont execute
+if(i%50 == 49) {
+	   result.push("50th: " +x+i)
+	}	
+
+So we are executing : 5/6 lines = 83% test coverage	

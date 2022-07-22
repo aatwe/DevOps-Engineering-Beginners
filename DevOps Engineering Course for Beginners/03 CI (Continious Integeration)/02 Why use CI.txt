@@ -1,0 +1,14 @@
+1) 1st step to automating devops
+
+2) CI improve developer speed, wo breaking existing code
+
+Developers improve 
+Old code has to be revised
+New changes can be made confidently without having to worry about breaking existing functionaliities
+
+3) CI reduces curstomer churn
+Prevents broken code from publishing -> customer satsifcation
+
+Feature branch is a practice in CI with which a devleopment team can easily scale
+Wiht just CI dev team can easily scale
+from 1 to 10 dev  

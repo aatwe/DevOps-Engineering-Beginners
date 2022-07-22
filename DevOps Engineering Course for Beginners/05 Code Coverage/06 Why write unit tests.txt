@@ -1,0 +1,3 @@
+Developers solidify their implementation
+Writing tests for features , dev wont throw it out //sense of ownership
+do not overoptimize

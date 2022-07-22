@@ -1,0 +1,16 @@
+1) New startups
+Recommended stack: Github , Netlify/Vercel , LayerCI
+
+Pillars 2 and 3 Deployment Auomation and Application Performance Management
+are useless for startups
+THey are for Netflix and amazon and big techs
+
+Nobody notices downtime etc
+
+2) app for 10 enterprise customers
+Recommended stack: GitHub  Sentry(log collection), PagerDuty(Alerting on downtime), CodeCob, Bitrise/Circle CI(automated test running)
+
+3) Reddit AppSocial media
+	Sentry (Catcherror) . E;asticSearch/Logstash/Kibana(collecting Logs)
+	Pingdom(Pages are too long to respond) Launch Darkly(Add feature flags)
+	Terraform(Automate deployment process)

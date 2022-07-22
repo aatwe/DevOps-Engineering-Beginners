@@ -1,0 +1,7 @@
+Paste the configuration
+
+Commit the file in repository
+
+
+First Dot is visible -> turns to check mark after tests have passed
+

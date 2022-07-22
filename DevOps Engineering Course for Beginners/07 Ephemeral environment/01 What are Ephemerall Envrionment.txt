@@ -1,0 +1,9 @@
+Temporary deployment that contain self contained version of entire application generally for every feature branch 
+
+
+
+Slack runs automatically on every commit using devops platforms like Layer CI or Heroku
+
+Temporary envt are overtaking CI platforms  as most valuable devops code review experience
+
+Because these environments are made on every change all of the stakeholders no just developers, product people designers can review change wihtout needing to set up envt or screenshare

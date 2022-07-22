@@ -1,0 +1,26 @@
+Ideais to merge staging ephemerial envt in CI piplines all together
+
+This is layer CI itself
+
+
+As ephemerial envt becomes powerful and easier to create
+THr approach and overtake many aspects of many CI pipelines
+
+If you cans etup website back end and database
+It is easier to run tests 
+Tests are easieer to run than backend
+
+Logical conclusion : Concept becomes Continious staging where CI CD and Ephemerial env tform a single CICD flow
+
+
+SIngle base takes all of the requirements for everything 
+
+
+If production envt has many different microservices and many different databases
+	it will be difficult to setup ephemerial envt
+
+Large companies like FB has set it up for internal pull requests
+They dontt hire develoiper teams/Infra stoftware engineers
+
+Smaller companies : Stick to hosted service like Layer CIs
+	Instead of making it yourself upto maybe you have 20 Dev

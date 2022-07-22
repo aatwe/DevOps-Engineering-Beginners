@@ -1,0 +1,19 @@
+1) Pull Request automation
+	Helps developer understand if their proposed change is good faster
+	Developer Feedback Cycle ->
+	  Developer share code changes using automic sets of changes called pull 	  	  requests (automic  = full feature on their own, do not require other things to 		  run)
+	  For ex  Typo in change can be automated
+
+	  Pull request= GIT //helps to make changes and share
+
+	 Pull request is reviewd by other programmer -> Code review
+	  Other program tells code style/arch problem etc other things
+	DevOps Tech stack facilitates this
+	After code review engineering manager gives feedback
+
+2) Deployment Auomation
+	Helps deploy code in a way users dont complain
+
+3) Application Performance Management
+	Automation around making things are healthy
+	Automatically waking someone up if site goes down etc

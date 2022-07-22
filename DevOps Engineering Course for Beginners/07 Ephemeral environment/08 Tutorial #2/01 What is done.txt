@@ -1,0 +1,12 @@
+Wehave already set up CI for repository
+we have our layer file i,e CI Configuration
+
+
+
+CI providers can setup ephemerial envt (small production envt to evaluate  changes live)
+
+
+We want someone to review changes by ephemerial envt
+
+
+

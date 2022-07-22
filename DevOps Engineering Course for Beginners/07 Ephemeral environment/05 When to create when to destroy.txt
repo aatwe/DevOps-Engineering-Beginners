@@ -1,0 +1,18 @@
+Lifecycle:
+
+
+1) When to create? 
+
+2) When to destroy
+
+Solution : Tie lifecycle of pull request to life cycle of ephemerial envt
+
+If dev opens pull request -> create  environment for them
+			keep it running 24/7
+			Until dev leaves envt
+
+What cost?
+	If ephemerial envt costs 10% cheaper than production 
+	If i have 30 pull requests -> my monthly costs quadruple
+
+Expensive dev tool

@@ -1,0 +1,5 @@
+Instead of blocking at code  review stage if there is revieew, feedback 
+
+Better for code reveiwers to leave small comments called nits
+
+

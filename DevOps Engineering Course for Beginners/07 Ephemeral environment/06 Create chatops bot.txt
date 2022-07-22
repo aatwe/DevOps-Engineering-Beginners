@@ -1,0 +1,17 @@
+allows creating new envt for specific branch with specific timeout
+
+for exIf user types
+  /prbot-create in github issue description -> creates environment
+	In slack do the same thing
+
+	
+Best approach -> create ephemerial envt for every change, similar to pr workflow
+Hibernate them as provisioned
+
+Heroku does that
+With heroku app can turn on and off envt
+LayerCI -> Shameless plug
+
+As users use envt in layer CI\
+
+Can automate this with memory snapshotting

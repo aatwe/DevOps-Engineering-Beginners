@@ -1,0 +1,26 @@
+Go to repository 
+
+Code -> services -> Cypress
+
+
+What is Cypress? End to End testing service
+
+
+What does it contain? Several configurations
+
+What do these configurations do? Interact with the page with fake browser
+
+We will make some tests to check if the change is not negatively affecting our customer workflows
+
+for ex a test
+enters username and password
+logs in 
+ensures user is actually logged in
+
+Another test
+goes to message area -> ENters random message 
+Ensures message is submitted, viewable in remaining chat area
+
+Enough end to end tests makes sure chat system keeps working
+
+how to run these tests everytimes?

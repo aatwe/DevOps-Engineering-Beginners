@@ -1,0 +1,5 @@
+1) Product has users who may leave if they are affected by bugs
+
+2) Untrustworthy developers like contracters or interns
+
+3) Working on a very large code base with many testable components

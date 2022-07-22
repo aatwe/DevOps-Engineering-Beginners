@@ -1,0 +1,18 @@
+not very expensive
+
+
+Central zGit repositories like
+Github Gitlab and Bit Bucket
+
+Have generous free tiers 
+Even for org
+some securiy and access control are paid
+
+
+CI Providers : Layer CI(websites), Github Actions, Git Lab pipleines all have gnerous free tiers as well
+
+Early on project CI provider does not matter much
+
+
+
+

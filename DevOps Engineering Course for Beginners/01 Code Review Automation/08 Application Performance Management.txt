@@ -1,0 +1,13 @@
+Operational errors can bring down code
+
+
+
+Ex Users put spaces at end of post on stack overflow, brought down stack overflow
+
+1) Metrics: key no. in production
+2) logging : As program executes generates logs  has information of state'
+		What key address /resource user accessed
+		Maybe because database was slow, Root cause analysis
+3) Monitoring : Add more web servers based on log, 
+
+4) Alerting : Based on log auto file tickets for engineers, automatically call on call person

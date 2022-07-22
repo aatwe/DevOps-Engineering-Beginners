@@ -1,0 +1,18 @@
+Everytime developer pushes changes in source code management tool
+
+In Pull request tab/view:
+
+We get success metric whether tests have passed or not automatically
+
+When developer asks for review
+Much easier for us to tell whether the change has negatively affected customer's workflow
+
+Open the pipeline by clicking yellow mark
+You can see that the tests are running(New version of application was built and started within the CI runner and one by one tests will run)
+
+
+IN pull request view see check mark
+
+
+After seeing all change have passed checks
+Merge Request -> Confirm

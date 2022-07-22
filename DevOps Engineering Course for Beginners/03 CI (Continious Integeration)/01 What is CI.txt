@@ -1,0 +1,6 @@
+Developers continiously pushing small changes to central repository numerous times a day
+
+
+
+How are changes verified?
+Automated computer software that runs the tests which are defined by programmers

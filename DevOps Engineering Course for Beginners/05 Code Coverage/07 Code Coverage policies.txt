@@ -1,0 +1,22 @@
+1) When you inherit a codebase 
+	Code coverage must not decrease
+	If current code has 75 % lines tested, you introduce 40 lines , atleast 30 of yours 	should be tested, dont decrease the average 
+
+demerit is expense of developer speed
+
+
+
+merits: Harder to test changes like integerations will be less likely to be worked on by 	developers 
+	Developers are incentivized to make more features per scrum cycle
+	If certain features are harder to tests, those features are harder to make and test, developers will be less likely to make them regardless of whether they are important to users or nots'
+
+Better for org to have exemptions, if it is going for code coverage not decrease policy
+
+
+2) Code owners for test files
+	Define code owners for tests
+	Dev can change implementation details without reviewers 
+	Logic changes in test should be approved by senior dev or manager
+
+ .spec.js @engineering-manager-username
+If there is a file called code owner, eng manager shouold approve any change which changes the test

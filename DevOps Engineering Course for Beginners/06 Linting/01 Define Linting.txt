@@ -1,0 +1,24 @@
+Code Automation Tool
+Used to catch bugs
+
+Any team with >1 developer working in same codebase should setup linter
+linters are programs that look at program's source code and finds problems automatically
+Common feature of pull request automation
+Make sure obvious bugs do not make to production
+
+Early products can avoid tests just by usinglinters
+
+Ex. 
+var x ="5";
+function f(elements) {console.log(elements)	//not good practice
+let x = 0;	//confusing	//var named same in innerscope
+while(x < 100)  {		//while goes on forever		
+	console.log(x)} 		//messses indent
+}
+
+
+Use style guides : Google style guides
+
+Developers should not wait for human reviewer to let them now if thier code is linted and styled correctly
+
+Hence Automatic linting

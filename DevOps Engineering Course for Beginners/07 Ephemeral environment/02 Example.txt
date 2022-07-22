@@ -1,0 +1,15 @@
+Developer is changing something on a website
+for ex frontend or backend i.e some component
+
+
+Dev wants feedback on change
+
+
+Code reviewer might not understand what are visual ramifications of that change are
+
+
+Within ephemerial envt within the code review itself, 
+reviewer will click  -> details for ephemerial envt button
+
+Reviewer checks if change is working workflow wise
+

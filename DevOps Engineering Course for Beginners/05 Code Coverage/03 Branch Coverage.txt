@@ -1,0 +1,5 @@
+Earlier we have main branch, body and if statement body (3rd branch)
+
+Branch coverage = how many individual branches are evaluated to true
+
+In early scenario : 2/3 branches were evaluated

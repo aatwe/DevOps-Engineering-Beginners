@@ -1,0 +1,14 @@
+Test Driven Development
+It is a methodology built on top of testing popular now
+
+Historically
+1) Unit Test : Ensuring individual components work on their own
+	Coffe machine : heater,tank cold water
+2) Integeration Tests : Ensuring components work together
+3) System (End to End Tests) : Ensure everything works together'
+4) Acceptance Test : Are customers satisfied
+
+
+Test Driven Development goals:
+1) Know when something breaks and where
+2) Know that whole system is working correctly

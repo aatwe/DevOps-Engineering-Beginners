@@ -1,0 +1,24 @@
+Our company uses "Devops"
+
+This is just Methodology
+
+1) Planning	    //what features may look like
+2) Code the features  //code the features
+3) build versions		   //bundle source code into JS
+		      Releases for video games, versions that run on linux/windows
+4) Testing builds
+	a) Automatic Testing
+		Continious integeration
+	b)Manual Testing
+		Quality Assurance / QA
+5) Release
+6) Deploy : Release is built and deployed
+	   //on Appstore //accessible on internet 
+
+7) Operate : Scaling/adding servers as required/architectural problems etc
+
+8) Monitor :As users use software take user feedback
+
+1) Planning : Put all the user feedback into planning stage
+	Build new versions of backend/architecture
+	

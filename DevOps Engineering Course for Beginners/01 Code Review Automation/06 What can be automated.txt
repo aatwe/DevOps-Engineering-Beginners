@@ -1,0 +1,13 @@
+1) Continious Integeration
+
+2) Per change ephemeral envt
+
+3) Automated security scanning
+
+4) Notifications to reviewers
+
+
+//End goal -> Dev should be able to propose and merge a change on same day
+Huge benifit
+Can fix critical bugs quickly
+No beaureucracy for developers.

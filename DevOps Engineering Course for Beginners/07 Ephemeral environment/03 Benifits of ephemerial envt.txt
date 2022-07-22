@@ -1,0 +1,19 @@
+1) Accelerates SDLC
+
+2) Dev can review results visually
+
+3) Dev can share work with non technical collaborators by just sharing link
+
+4) Hard part = Dealing with databases and microservices
+	By nature ephemerial envt are temporary ,
+	   isolated from production envt and really only last as long as pull request does
+
+	Reviewer should be able to delete a resource in review
+	They should be able to see if deleting a user still works without fear of affecting	 	production envt
+
+	In early implementation , makes sense to connect to API servers with read only 	permissions through staging Database
+
+	ENd goal = have fresh copy of database for every commit
+	Every time developer proposes change -> they get new ddatabase for their environment
+
+

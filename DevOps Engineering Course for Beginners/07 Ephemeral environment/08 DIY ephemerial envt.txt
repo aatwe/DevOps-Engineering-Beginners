@@ -1,0 +1,6 @@
+BUdget 6-12 months of engineering time for setup
+Dedicate person for managing envt
+
+Get Cloud service provider
+
+Create slackbot that responds to  /env-create-for mybranch with  a link

@@ -1,0 +1,32 @@
+In repo 
+services -> web -> create another file
+
+Code:
+FROM / Layerfile
+
+EXPOSE WEBSITE https://localhost:443
+
+//We will expose the website inside the runner itself
+Create new branch ->propose new file -> open a pull request (Add new Ephemerial envt)
+
+What code reviewer will see?
+Test results(Initial Layer File) + 
+
+Go to LayerCI Graph -> See tests running
+
+Initial (Main) Layer file 
+Built services
+Started all services
+Is now running Cypress tests , same way did in CI chapter
+After Cypress tests run-> second environment that inherits from first
+This seocond environment has clickable link that can be used for manual QA
+//Snapshot is being taken
+
+It will build a staging server button
+
+
+
+//Once all tests are done
+-> Clic main layer file details => Click View website button
+
+Once all satisfied -> merge the pull request

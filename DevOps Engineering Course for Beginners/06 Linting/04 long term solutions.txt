@@ -1,0 +1,22 @@
+Set up a commit back button
+
+
+
+COPY . .
+RUN if ! npm run eslint; then \
+	npm run eslint --fix && \			//es lint is linter for JS, goes thru 							source files
+	git config user.name 'lint bot' && \		//applies linting rules, fixes 								stylistic errors for each of them
+	git add -A && \				
+	git commit -m 'Automatically linted' && \	//Create a commit , an	 							additional set of file changes on 						top of what dev is proposing
+
+	git checkout -b $(git rbanch - show-current)-linted && \   //creates a new branch 
+						with suffix linted
+	git push -f origin $(git branch --show-current)-linted; && \ //pushes to that 						branch sothat dev pushes unlinted code-> bot automatically create commit which linted verything
+Which creates new branch 
+The reviewer can merge linted branch instead of dev original
+
+	echo 'lint failed!' ; exit 1			//Fail the pipeline//unlinted version cant be merged, linted one assuming all feeedback is linting related could be merged
+2 branches
+
+1) Dev proposing
+2) Linted one 	/reviewer merges this branch

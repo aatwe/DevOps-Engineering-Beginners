@@ -1,0 +1,4 @@
+Measure code coverage 
+If working in large cod ebase using TDD
+
+If hiring interns/contractors or have users sensitive to bugs

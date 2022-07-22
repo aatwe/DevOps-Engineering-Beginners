@@ -1,0 +1,15 @@
+COPY .  .				//copy project files
+RUN npm run lint			//RUN LINTING SCRIPT
+			If linting script fails, whole pipeline fails
+
+Stops reviewere from having to giv esttle feedback
+
+if all checks are code reviewed passed
+	Passes all linters 
+	 Then it is sylistically ok
+
+the reviewer might leave feedback for future.
+THey shouldnt be blcoking commit getting to production due to small stylistic choices that arent even in linters
+
+
+

@@ -1,0 +1,30 @@
+CI is a vital tool first thing that should be automated in most pull request automation schemes
+
+It is easy, dev should be writing these tests regardless
+if you dont run tests automatically people will slowly break things and users will notice
+
+
+
+Feature branch is a practice in CI with which a devleopment team can easily scale
+Wiht just CI dev team can easily scale
+from 1 to 10 dev
+
+Dev work on a feature branch
+They take most current files, branch off make a new copy of files, make changes to components, feature makes change to mobile app and website
+On the branch they push it back to repository
+repository runs the CI(CI is configured on repository side)
+CI runs all tests programmer finds,
+Result of tests attached to pull request
+Pull request = dev asking to take their code and merge with central repository that user will be shown
+In next deployment the features will be visible to users
+
+
+Master branch
+	Fix issue : user cant	       -->      Add terms and service to  --> Add Prvacy policy 
+	Open app on android	   Website		   to website
+	
+
+
+Feature branch
+	Add firestation finder  --> Add firestation finder to list of premium features 
+	to mobile app

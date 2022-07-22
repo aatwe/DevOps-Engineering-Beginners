@@ -1,0 +1,14 @@
+1) Canary Deployment : Show feature to certain users
+
+2) Start new versions of services wo causing downtime
+
+3) Roll back to prior versions if something goes wrong
+
+Deployment can be complicated,
+companies have internal platforms for building and distributing releases
+
+Deployment automation = finding appropriate deployment tools to fulfill biz goals and configuring them
+
+
+Ideally there should be no custom code for deploying
+	Solutions like : Spinnaker, harness

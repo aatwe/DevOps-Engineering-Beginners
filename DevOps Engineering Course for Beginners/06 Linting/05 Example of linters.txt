@@ -1,0 +1,8 @@
+Javascript : ES lint
+Typescript : ESLint
+Python  pylint flake8
+C++ Google's cpplint (Google styleguide)
+Go : gofmt
+Java : CheckStyle, FindBugs
+Ruby : RuboCop, Pronto
+VB .net : SonarQube

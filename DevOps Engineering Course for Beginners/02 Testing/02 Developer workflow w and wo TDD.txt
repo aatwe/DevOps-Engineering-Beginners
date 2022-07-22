@@ -1,0 +1,30 @@
+workflow Without TDD
+
+1) Chose something to work on
+	Based on idea in planning phase
+2) Build based on specs
+	Write code ,make build from that code
+3) Test with small scripts
+	Test it //write small scripts to make sure code is working correctly
+		for ex pass values to sum function and check
+	Tests written at the end codifty specifications
+	
+For ex 	Successfull coffe maker should 
+	 heat up in 5 sec	//write test for this
+	 brew coffee of sufficient strength  //write test for this 
+
+With TDD //Developer write test before writing the code
+	write tests that are currently failing
+	write code until all specs have satisfied
+
+1)  Chose something to work on
+ 
+2) Write tests that would pass if product works
+ 
+3) Keep building until all tests pass
+
+Ex. :	Make a testing regimen that would work if coffee maker succeeded
+	Build cheapest coffee maker that satisfies
+	
+Easier to write code if you write tests first
+Forces to prioritize and think on important things
