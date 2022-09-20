@@ -1,0 +1,134 @@
+Q0) What can we store in YAML? key value pairs, lists
+Q1) we can use this file to convert it into a hashmap / json object
+Q2) YAML is case sensitive? yes
+Q3) Spaces v important in YAML, -> try make a change in space -> use YAML linter -> throws error
+Q4) How to tell YAML 3 different types of documents? ---
+Q5) How to specify end of document in YAML? ...
+Q6) how key value pair look like?
+	key -----> value
+
+
+Q7) How list looks like?     ____ list value1
+		        /          list value 2
+		      /            list value 3
+		list 
+
+Q8) What YAML to JSON looks like
+Q9) YAML does not provide multiline comment, can use shortcut to add to everyline though
+.yaml
+	cities:
+	  -new delhi
+	  -mumbai
+	  -gujrat
+
+.json
+{
+  "cities":  {
+	"new delhi"
+	"mumbai"
+	"gujrat"
+ ]
+}
+
+OR  write as below to avoid indentation mistakes
+.yaml
+{mango: "yellow fruit", age:: 56}
+.json
+{
+  "mango" :"yellow fruit"
+ "age": 56
+}
+Q10) data types in yaml? all 3below are string variables
+	myself: Kunal Kushwaha
+	fruit: "apple"
+	job: 'swe'
+
+Q11) What yaml file does not understand?
+	bio: hey my name is Abhilash Atwe
+	i am a ok guy	# this line cant be understood
+
+->then how to write multiline ,
+	bio:
+	hey my name is Abhilash Atwe
+	i am a ok guy
+
+Q12)  then how to write multiline , later computer can treat as single line ? message
+	message:>
+	this will
+	all be
+	in one single line
+	
+SAME AS
+	message:> this will all be in one single line
+	number: 5473
+	marks: 98.76
+	booleanValue: No #n, N, false, False, FALSE
+	# same for true -> yes, y, Y
+
+Q13) How to specify the type of data?
+	zero: !!int 0
+	positiveNum : !!int 45
+	negativeNum :: !!int -45
+	binaryNum: !!int 0b11001
+	octalNum: !!int 06574
+	hexa : !!int 0x45
+	commaValue: !!int  +540_000 # 540,000
+	
+
+Q14) How to write f/ directly specify loating point numbers?
+marks !!float 56.89	
+infinite: !!float .inf
+not anum: .nan
+
+Q15) How to directly specify boolean
+booleanValue: !!bool No #n, N, false, False, FALSE
+
+Q16) message: !!str	this is in one single line
+
+Q17)null
+	surname: !!null Null # or null NULL ~
+	~ : this is a null key
+
+Q18) date and time
+	date: !!timestamp 2002-12-14		//Assumes utc timezone
+
+#how to add indian time
+
+	india time: 2001-12-15T02:59:43.10 +5:30
+
+Q19) how to write exponential number
+exponential numbers: 6.023E56
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+0) Note YAML is just a tool, main thing is kubernetes
+
+1) Open vscode
+
+2) create yaml file
+	hello.yaml
+
+
+3) hello.yaml
+	#key-value pairs
+	"apple" : "I am a red fruit"
+	1: "this is kunal's roll number" 
+	---
+	#lists
+	-apple
+	-banana
+	-mango
+	---
+	#blocks
+	cities:
+	  -new delhi
+	  -mumbai
+	  -gujrat
+	---
+	cities: [new delhi, mumbai]		# avoid indentation mistake , write list linearly
+	---
+	{mango: "yellow fruit", age:: 56}	# write key value pairs linearly
+
+	...
+
+
+
+	

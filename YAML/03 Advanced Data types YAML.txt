@@ -1,0 +1,145 @@
+advanceDatatypes.yaml
+1) Sparse list
+#a) normal list
+	student: !!seq
+	 -marks
+	 -name
+	 -roll_no
+
+	#like this also
+	cities: [new delhi, mumbai]
+	
+	#some of the keys of the seq will be empty
+
+#b) sparse list
+	sparse seq:
+	  -hey
+	  -how
+	  -
+	  -Null
+	 -sup
+
+#sparse			#json
+- #space		{
+ -mango		   [
+ -apple		         "mango",
+ -banana		         "apple", 
+-		         "banana"	
+ -marks		  ],
+ - roll num	  [
+ - date		         "marks",
+		         "roll num",
+		        "date" 
+		  ]
+
+2) What are maps? key-value pairs
+!!map
+
+2.a) How to write map inside a map?
+
+# nested mappings: map within a map
+name: Kunal Kushwaha
+role:  
+  age: 78
+  job: student
+
+SAME AS
+name: Kunal Kushwaha
+role: { age: 78, job: student
+
+
+3) how to assign multiple values to a key? pairs
+
+# pairs : keys may have duplicate values
+# !!pairs
+
+pair example: !!pairs
+  -job: student		# job key with multiple values
+  -job: teacher  
+
+
+Where used?How to access?
+This will be array of hashtable
+
+# yaml pairs
+pair example !!pairs
+  -job : student
+  -job : teacher			
+
+OR
+
+pair example: !!pairs [job: student, job teacher]
+
+
+
+OR
+
+#json # hashtable
+			{
+			   [
+			         "pair example": {
+				[
+				"job",
+				"student"
+				],
+			                  [
+
+				"job",
+				"student"
+
+				]
+ 			   ]
+			}	
++++++++++++++++++++++++++++++++++++++++++++++++
+4) how to create a set?  (items only, no key value pairs)
+
+names: !!set
+  ?Kunal
+  ?Apoorv
+  ?Kunal	#not allowed
+
+ 
+
+5) how to create dictionary		/sequence as a value
+#What below looks like?
+	People contains --> kunal and Rahul
+		Kunal contains -> name,age,height
+		Rahul contains -> name,age,height
+
+
+People: !!omap		#type = omap = dictionary  #what will be value? sequence
+  -Kunal:
+     name: Kunal Kushwaha
+     age: 78
+     height: 678
+ -Rahul:
+     name: Rahul OP
+     age: 50
+     height: 456
+
+
+What is use case of dictionary? if a property repeated in every ? we dont type
+Solution: anchors
+
+What are anchors? What to copy, Where to copy/paste  #it will overwrite if exists
+
+a) 
+likings: &base
+       fav fruit: mango
+      dislikes: grapes
+
+person1:
+	name: A Atwe
+	<<: *base
+
+
+b) can also update
+likings: &base
+       fav fruit: mango
+      dislikes: grapes
+
+person1:
+	name: A Atwe
+	<<: *base
+	dislikes: berries  #will update the dislike pasted here
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

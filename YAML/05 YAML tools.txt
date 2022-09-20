@@ -1,0 +1,14 @@
+Datree:
+
+1) validates Kubernetes configuration files ---> YAML only
+
+
+2) validates YAML files
+
+
+MONOKLE	//helps with large scale kubernetes yaml files
+	by Kubeshop
+
+
+Lens : World's most advanced kubernetes platform
+	helps create pods, create yaml files automatically

@@ -1,0 +1,117 @@
+YAML files
+
+Note: there are tools with which you can work with YAML files , without writing YAML code
+
+
+YAML = YAML Aint Markup Language
+
+
+What is a markup language?
+	Child parent relationships
+
+
+What is YAML? Data format
+		What use? exchange data
+			Similar to XML,  JSON data types
+
+What can we store in YAML? Only Data
+		                 DOES NOT CONTAIN Conditional Logic
+
+
+What is storing this data called? Data serialization
+
+What are objects? collection of data
+
+
+Objective:
+Given object on a computer, 
+What if we want to share the object between android app, Web app, ML app? Different formats
+What is the one format we can convert it into? YAML file
+
+
+Summary :
+Data object ----> YAML ----> Data object
+	serializ	       deserializ
+
+
+
+
+______________________________________________________________
+How to share data in one single format? Serialization
+What is Serialization? Converts data object 
+			stored where? complex data structure
+			Convert into? Stream of storage
+				What is stream of storage? Byte Stream // chunks of data
+
+
+Definition: Serialization is a process of converting data object (code+data) into series of bytes 
+		Why convert series of bytes? to save the state of object
+			This state of object is easily transmittable
+
+A: For ex
+How to store data into a device? Serialization
+Given: File with data
+//Serialization
+1) Convert object into stream of data (chunks of bytes)
+2) Store in required device storage / DB / YAML file/ Data serialization languages
+
+Ex of data serialization languages? YAML, JSON, XML  
+
+Q0) What is markup? use tags to define elements and add information
+	for ex <i> Hello World </i>	-> is marked with <i> tag  ---> for the browser to display it as italic text
+
+Q1)Why YAML is called not a markup language?
+	HTML/XML : Use tag to define structure
+	YAML 	  : Uses indentation not tags to define hierarchy
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+B: How to do serialization? Serializer
+	What is serialization output? YAML file
+
+
+C: How to get data from that device & store in another?
+//Deserialization 
+1) get stream of data
+2) convert stream of data back into object
+
+
+
+D: How to do deserialization? 
+1) Convert object into stream of bytes
+2) Store object in YAML file 
+
+
+ 
+How to convert stream of data back into database?Deserialization
+________________________________________________________________________________________
+Q0) What type of problem kubernetes solves?
+After making an app
+we want to run it on 10 servers + cloud. 
+Limit set to 5 applications perserver
+
+Kubernetes solves this: by creating a pod object
+what object looks like? provided by YAML file
+
+basically we will use yaml file data in kubernetes data pod
+
+Q1) What type of data in yaml files?
+
+
+
+Q2) Where is YAML used?
+Dockert / Kubernetes config files (refer Q0)
+logs, caches etc
+
+
+Q3)What are benifits of YAML?
+Human readable
+Strict syntax  //not many mistake
+indentation important
+can convert to JSON/XML ez
+Most languages use YAML
+Complex data can be represented here in a more powerful way
+Can use many tools with YAML (Parsers etc)
+
+	

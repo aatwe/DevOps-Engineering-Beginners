@@ -1,0 +1,67 @@
+ 	School
+ name	Principal	Students
+		
+		Student
+	          rollno   name    marks
+
+
+
+How to represent this inYAML/XML/JSON
+	basically Data --> Code		//Serialization
+
+1) Create xml  //note very human readable
+	school.xml
+
+	1) <?xml version="1.0" encoding= "UTF-8">
+	
+	2)<School name="DPS" principal="Someone">
+		<Students>
+		       <Student>
+			<rno>23</rno>
+			<name>Kunal Kushwaha</name>
+			<marks>94</marks>
+
+		       </Student>
+		</Students>
+	  </School> 
+	
+
+	  </School>
+
+2) JSON  // used in JS	//more human readable   //note {} = 1 entry  [] = collection of entry
+
+{
+	"School": [
+	      {
+		"name" : "DPS",
+		"principal": "Someone",
+   	      	"Students": [
+			{
+				"rno" : 12,
+				"name": "Abhi Jadeja",
+				"marks" : 67						
+			},
+		 ]
+	        }		
+	] 
+}
+
+
+3) YAML	//cleanest
+---
+School:
+- name: DPS
+  principal: Someone
+  Students:
+  - rno: 12
+    name: Abhi Jadeja
+    marks: 67
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+When working with bug kubernetes files -> have to make sure yaml files are validated
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+How to validate YAML
+https://itnext.io/how-to-validate-kubernetes-yaml-files-9a17b9a30f08
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
