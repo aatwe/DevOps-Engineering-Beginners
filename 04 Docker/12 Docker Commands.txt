@@ -1,0 +1,122 @@
+a) docker pull mysql		//downloads mysql image from registery
+   OR
+     docker pull ubuntu:16.04
+
+
+b) docker images
+>ubuntu 1	6.04
+
+c) docker run -it ubuntu:16.04	//we are inside the container
+
+d) 
+root@ac99ae404bb4:/#	 //user
+
+
+
+_____________________________________________________
+Lets try to compare processes
+a) ubuntu container: docker run -it ubuntu:16.04
+     ps aux
+	//different processes 1
+
+
+b) main os
+     ps aux
+	//different processes 2
+_____________________________________________________
+
+How to view all containers?
+docker container ls
+
+_____________________________________________________
+Copying container id from one to other
+System1: docker container ls
+	 -> Copy container id
+
+System2:
+either we can
+	 -> docker run -it ubuntu:16.04
+or
+	-> docker run it *paste containerid* bash
+
+
+//basically we attach bash shell to this running container in system2
+
+
+What impact/use?
+touch hey.txt in System 1
+hey.txt appears also in System2 
+
+SO COOOL
+
+________________________________________________________________
+System1 : docker run mongo
+System2 (container) : docker ps 
+________________________________________________________________
+Stop container using id
+System 2 : docker stop *paste id*
+System1 : container stops
+
+//check using docker ps-a//shows container stopped
+________________________________________________________________
+Remove container using id
+docker rm *paste id*
+docker ps-a 
+//shows container is gone
+________________________________________________________________
+How to get all info about container
+docker inspect *paste id*
+	//image
+	//state
+	//path
+	//id	
+	//network info
+________________________________________________________________
+How to check docker logs
+docker ps -a
+docker logs *pasteid*
+________________________________________________________________
+docker container prune -f	//Deleted all the containers	//-f is forced
+________________________________________________________________
+What if container running in background for a long time? ex server
+
+docker run alpine ping www.civo.com		//can run linux command , why?image base is linux kernel in docker
+
+What it does?
+a) pings civo continiously
+b) check now your containers  in docker ps 
+    	//can see alpine
+
+_______________________________________________________________
+How to run docker container in background
+
+docker run -d alpine ping www.civo.com
+>9694a11....	#container id
+
+docker run ubuntu echo Hey
+>Hey
+
+_______________________________________________________________
+Find all docker logs for container id
+docker logs -9694
+
+Find docker logs since last 5 seconds
+docker logs--since5s 9694		//9694 is first no. from container id
+
+_______________________________________________________________	
+How to stop the container?
+docker stop 9694
+_______________________________________________________________
+How to remove stopped container?
+
+docker rm 9694
+
+_______________________________________________________________
+How to view your images
+docker image
+>alpine
+  etc
+
+How to remove particular image //alpine 	
+docker rmi alpine -f
+_______________________________________________________________

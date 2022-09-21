@@ -1,0 +1,35 @@
+We have a Client server architecture
+client =docker CLI
+Server =  Daemon
+
+What docker contains? mainly container runtime
+
+
+a) -Shipped Orchestration
+		//What is orchestration? ex 10000 containers running application  > all have version 1 of app
+		we have to update version 1 -> version 2
+		How to update? Orchestration Engine : helps manage containers
+		Ex Kubernetes 
+
+            Docker CLI			//Client
+            	|
+        	REST API ex "docker run ubuntu" 
+            	|
+            	V
+b) - Docker Engine / Docker Daemon	//Server
+     	|		 
+     	|  	//Dameon informs runtime, that abhilash wants to run ubuntu in container
+     	|   		
+     	V
+c) -Container Runtime //allows to start and stop container 
+   		 runc  //low level runtime	:   What this runtime does?  works with OS, starts and stops containers
+		containerd  //high level runtime  What it does? manages runc, helps how to interact container with internet (pulling data etc)
+		lxc,rocket rkp, cryo etc
+
+
+
+Q1) What Daemon does?
+a) listen to api requests
+b) manage all docker object
+	objects like: container,images,networks,volumes
+	

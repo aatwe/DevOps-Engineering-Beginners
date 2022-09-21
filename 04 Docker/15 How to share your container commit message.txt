@@ -1,0 +1,74 @@
+Sceario: we hav emade changes in container
+
+Ex
+a)  //Run container
+docker run -it ubuntu
+docker ps  -->
+copy the image id
+
+
+b) //Make changes in container
+
+b.1) echo "Hey my name is Kunal" >> names.txt
+
+b.2) ls
+b.3) cat names.txt
+>Hey my name is Kunal
+
+
+c) How can my friend download this ubuntu image with my changes? commit messages
+
+>exit
+__________________________________________________________________________________
+
+
+a) docker ps
+b) docker ps -a
+				// find our container -> copy id
+
+c) docker start *paste id*		//start container
+
+d) docker exec -it *paste id* bash	//go inside container as bash cell
+
+e) ls				//find names.txt
+> names.txt
+
+WE WILL TRY TO CREATE IMAGE FROM IT using commit messages
+
+a)//docker commit -m "added  names.txt file" *paste id* image_name
+     docker commit -m "added  names.txt file" *paste id* names_ubuntu:1.01
+
+b) docker images
+REPOSITORY		TAG	IMAGE ID		CREATED		SIZE
+> names_ubuntu		1.01	40d2bba		4 seconds ago	65.6 MB
+ 
+
+c) docker ps
+//copy container id
+
+
+d) docker stop 062a43706d53
+e) docker images
+
+f) docker run -it names_ubuntu: 1.01
+g) ls
+	//can see names .txt avail
+
+
+h) docker images -q	//gives all ids of images
+
+//How to remove ids of all images?
+docker rmi $(docker images -q)
+
+
+i) docker images
+ubuntu	//running container cant delete itself 
+
+j) docker ps
+//Get id
+
+k) docker stop *paste id*
+
+l) docker rmi*paste id*
+
+++++++++++++++++++++++++++++++++++++++++++

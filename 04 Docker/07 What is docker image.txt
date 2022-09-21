@@ -1,0 +1,56 @@
+If i want to share my application with a friend
+
+a) Create Image of application
+b) Share image
+
+
+Q2) What is image? file with all instructions
+Q3) What is container? Running instance of image
+
+
+Q4) How to create docker image? Docker files
+
+
+Run Dockerfile --> Get Image
+Run Image        --> Get Container
+
+_______________________________________________________
+Q5) How to containerize a docker application?
+	a) Write Docker file for application
+	b) Convert Dockerfile into image
+	c) Share image with other people
+______________________________________________________________
+Docker file -------> Image ---> Container
+		//class	   //object 
+______________________________________________________________
+
+Q6) Which container runtime to use?
+	lxc,rocket rkp, cryo etc	
+	Open container initiative(OCI) // linux foundation project		//Docker complies
+	specify 							//these basics are must
+	a) runtime spec guidelines
+	B) Image spec guiidelines
+
+
+Any OCI compliant image, no matter using what tool it was made
+	----> Looks the same to Kubernetes 
+
+______________________________________________________________
+Q7) what is docker remote registory ?
+	images of popular tools avail online
+	dockerhub
+______________________________________________________________
+
+Demo Case of Docker -> CMD
+//Run Ubuntu on Docker
+1) ex docker run -it ubuntu			//Will run ubuntu
+//parallelly we can run mac
+
+
+
+//See All Running containers on mac
+2) docker ps
+//shows ubuntu started 12 sec ago
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+containers are dependent on images and use them to construct a run-time environment and run an application

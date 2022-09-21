@@ -1,0 +1,82 @@
+What we know
+
+a) -Shipped Orchestration
+		//What is orchestration? ex 10000 containers running application  > all have version 1 of app
+		we have to update version 1 -> version 2
+		How to update? Orchestration Engine : helps manage containers
+		Ex Kubernetes 
+
+            Docker CLI			//Client
+            	|
+        	REST API ex "docker run ubuntu" 
+
+			What happens when we docker run
+			docker run   --> talks to ---> Docker Daemon ---> talks to ---> Contained  using grpc  //remote procedure call protocol
+									//used by client and server to communicate
+            	|
+            	V
+b) - Docker Engine / Docker Daemon	//Server
+     	|		 
+     	|  	//Dameon informs runtime, that abhilash wants to run ubuntu in container
+     	|   		
+     	V
+c) -Container Runtime //allows to start and stop container 
+   		 runc  //low level runtime	:   What this runtime does?  works with OS, starts and stops containers
+		containerd  //high level runtime  What it does? manages runc, helps how to interact container with internet (pulling data etc)
+		lxc,rocket rkp, cryo etc
+
+ ______________________________________________________________________________________________________________
+Summary: Any one can have their own runtime now
+	But have to follow rules mentioned by OCI about 	Images and Container Runtime specs
+
+_______________________________________________________________________________________________________________
+What does the Docker engine looks like?
+
+
+			Docker client
+					What happens when we docker run
+					docker run   --> talks to ---> Docker Daemon ---> talks to ---> Contained  using grpc  //remote procedure call protocol
+									//used by client and server to communicate
+			         |
+//Engine			         V 	note:() = name of binaries in linux
+
+			   Daemon(dockerd)		/manages images, networking part , apis with docker client etc
+			        |
+			        V
+			Containerd			//supervisor //starting/stopping container  //manages runc  //works with network  //cncf project  //also used in Kubernetes as runtime
+							//input: docker image
+			/      |	\	
+		         shim      shim     shim(docker containerd shim)
+		            |	        |	    |
+		         runc        runc      runc(docker runc)	//Creates containers   talking to OS,kernels etc
+							//once container created, runc is removed
+							//when runc goes out of scope , shim takes over 
+		           |	       |             |
+		     container  contnr     contnr
+ 		     created     created   crtd
+
+
+
+History:
+How container got Daemonless?Daemon down, container still running //shims
+
+Earlier there was only docker client and linux specific files
+But not good for scale / monolithic architecture
+then they added containerd and runc
+
+Daemon: had rules and logic of container
+Problem: Once docker daemon stopped- > all container running also stopped
+What if we have to update Daemon etc? Shouldnt impact running containers
+
+We know:
+//once container created, runc is removed
+
+How to manage containers/talk to containerd?
+Shims
+//when runc goes out of scope , shim takes over
+
+
+Q) How client and server communicate?
+Note Client ---> Server communicate on port http 2375
+docker only allows secured connection: TLS //transport layer security  //safe
+		

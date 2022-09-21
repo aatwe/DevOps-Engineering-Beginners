@@ -1,0 +1,58 @@
+Companies have applications running
+
+
+Where are the applciations running?
+	Servers  / Data centres from cloud providers
+
+
+Earlier practice/History:
+	Only 1 application ran on 1 server
+		200 people using application
+
+
+	What when load increases?
+		Need to run multiple application on a server.
+		But no way to run multiple application on server
+		How to keep application running for higher load?	Add/Buy a new server
+
+	Every time new application -> buy new server
+		XXX Very Bad XXX
+-----------------------------------------------------------------------------------------------------------------
+ Solution?
+
+VMware: Virtual machines
+
+What are virtual machines?	
+ Can run multiple application on single server
+
+a) Problem:
+ But virtual machines need their own OS --> new OS costs
+dependency issues
+//Still problem
+b) Solution?
+	What if we had isolation , without new OS
+
+What is dual booting computer? one part of hard-disk: windows
+			      other part : Ubuntu
+
+Ubuntu doesnt know whats up in windows and vice versa	 
+
+What if we can run all instances of application on same OS?
+
+SOLUTION? CONTAINERS
+-------------------------------------------------------------------------------------------------------------------
+  What are containers?
+
+Big companies used containers in a way
+Container is like Virtual machine, just dont need new OS to use it
+
+
+Scenario: You give your application website to friend saying its not working
+	Earlier friend faced dependency issue when running on his
+
+Now
+you put all things that are needed with your code to be run in a box : Container
+
+
+Q1) How multiple machines are created on host OS? Hypervisor
+Q2) Virtual machines vs container

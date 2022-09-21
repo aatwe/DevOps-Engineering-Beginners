@@ -1,0 +1,9 @@
+docker file --> Image --> container
+	          //class	b
+
+Usually our mongo db runs on our OS
+Simlarly 
+Docker container also contains"
+
+1) OS files
+2) dependency

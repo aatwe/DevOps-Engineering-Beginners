@@ -1,0 +1,8 @@
+for ex we wanna run MySQL/MongoDB without installing
+
+use container
+	docker run mongo
+	docker run mySQL
+
+
+Container = Isolated envt to run application

@@ -1,0 +1,37 @@
+0) //how to see all images?
+    docker images
+ > ubuntu
+
+
+1) docker run hello-world
+
+# tell cli-- run a image--image_name
+
+//checks if we have hello_world image on computer
+//if not downloads image from docker repo
+//runs image
+
+    docker images
+ > ubuntu
+> hello-world
+
+
+2) docker run it ubuntu 
+//this will load fast, why? we already have ubuntu image downloaded, its not downloading
+
+
+
+3) docker run hello-world
+//this will also run fast
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+What is flow?
+
+a) docker run --->daemon //checks if we have on local system
+			if yes -> Run the image
+			if no -> Download from internet dockerhub registery -> Run the image
+
+b) Run the image ---> form a container
+			---> container says hello-world
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

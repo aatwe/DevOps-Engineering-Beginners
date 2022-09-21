@@ -1,0 +1,48 @@
+Summary:
+inside container imgaes running --> images based on linux
+
+a) How to access container
+
+Given: nginx
+//What is nginx ? web server used for reverse proxy and HTTP cache
+	runs on port 80
+
+
+How to access nginx on port 8080 ?
+
+docker run -d -p 8080:80 nginx
+ //this will download nginx
+
+//check image id
+
+
+b) Check port 8080
+Open webpage : localhost:8080
+
+//where is this localhost:8080 nginx running? IN YOUR CONTAINER ON LOCAL SYSTEM
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Why -p tag?
+-p takes 2 arguments
+	What port to expose to?
+
+a) inside container     : nginx(with docker) 		--> listening to port 80
+b) outside container  : if we run nginx(without docker) 	--> listen to port 80
+	
+
+How to access nginx running inside container, from outside?
+
+
+Forward all request we making to localhost:8080 ---> inside container port 80
+
+Summary: 
+If we access localhost:8080 ---> request forwarded to container inside 8080  //how forwarded? -p tag
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+How to check logs for the above image?
+docker logs d323
+//We can see our get request mentioned
+
+
+docker stop d323
+
+docker rm d323

@@ -1,0 +1,63 @@
+1) we only downloaded other images like mySQL,ubuntu ,mongodb etc
+
+2) How to create our own container / docker file?
+
+a)   
+	touch Dockerfile
+
+b) 
+	FROM ubuntu					//Base image : every image has base image
+	MAINTAINER abhilash atwe <abhi.atwe@gmail.com>	//
+	RUN apt-get update				//
+	CMD ["echo", "Hello My name is Abhi"]				//What exe to run when container has started  //commands given in array form
+	
+	//Docker file created
+
+
+
+note: how to modify above file? vi Dockerfile
+
+
+c) how to login to docker?
+	d.1) login on website
+	d.2) docker login
+		Login
+		Password
+
+d)  how to build images?
+
+
+	           //name	//path to docker file (we created docker file in Desktop folder)->current directory	
+docker build -t myImage:1.01 .
+
+//What happens here?
+1) Sends build context to Daemon  //everything from desktop (docker folder) sent to daemon
+	if dont want to send any -> add to .dockerignore
+
+	//can do below to send form empty folder	//this time docker build command will be faster, earlier desktop had lots of files
+	mkdir project
+	mv Dockerfile project
+	cd project
+
+2) send FROM ubuntu
+
+3) send CMD
+	running in container id
+______________________________________________________
+
+e) How to check created Image 	
+docker images
+>myimage
+
+
+f) Run the created image
+
+docker run myimage 
+>Hello my name is Kunal
+
+
+WE HAVE CREATED OUR OWN IMAGE
+//Same image will be visible on Docker Desktop
+//can run the image  to create container etc do whatever you want
+_________________________________________________________________
+

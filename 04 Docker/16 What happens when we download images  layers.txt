@@ -1,0 +1,62 @@
+a) docker run ubuntu:16.04
+//shows 4 ids
+id1: Downloading
+id2: Downloaded
+id3: Downloaded
+id4: Downloaded
+
+
+a) what are above 4 ids? Layers
+
+
+b) What are layers? Image is immutable:
+
+c) What is image made of? Collection of files and directories
+
+
+d) What is ubuntu image above made of? 4 Images / files
+
+Why Images are built of layers?
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+How are these files / layers handy? Can reuse shared image files
+
+-> mongodb image could have files that are also used in ubuntu image
+
+Ex : installing mongodb
+If we already have ubuntu image downloaded 
+  ->can avoid downlaoding common files
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+About Layers
+
+1) every layer has hash value
+sha256:35562
+
+
+
+a) How to get hash value?
+$ docker images -q --no-trunc
+sha256:fe3b34cb9255c.....
+REPOSITORY	TAG	IMAGE ID		CREATED		SIZE
+ubuntu		16.04	fe3b34cb9255	3 months ago	119 MB
+
+//the image id = first values of hash value of image
+
+b) how to check layers
+docker inspect fe3b34cb9255
+
+> 
+"Layers" : [
+	"sha256:d6021..."
+	"sha256:1af..."
+	"sha256:ea4b7..."
+	"sha256:c6a4b7.."
+]
+ //4 layers in image , each layer has its own hash value
+
+//When we download other images --->  it checks if any image layer is common , if yes avoids downloading it
+HENCE FAST
+Already Downloaded layer, not downlaoded again
+
+

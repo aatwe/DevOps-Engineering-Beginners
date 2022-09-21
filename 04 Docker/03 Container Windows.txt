@@ -1,0 +1,16 @@
+Windows : Docker Desktop + WSL
+
+a) if we containerize windows application
+	it wont run on linux based docker
+
+b) if we containerize linux application
+	it wont run on windows based docker
+
+
+
+1) Download Docker Windows
+
+	
+
+
+2)
