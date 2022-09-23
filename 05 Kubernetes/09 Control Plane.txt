@@ -1,0 +1,48 @@
+What is control plane? componentes : help manage overall health of cluster
+
+
+		Scheduler    etcd		
+ //CLI		 |         _____ /	
+KubeCTL-----> API Server   _____
+		             	        \
+			    controller manager
+	       -------------------------------------------------	
+  	      |	    Linux			       |	//control panel runs on top of linux
+	      |				       |
+	       -------------------------------------------------		
+a) API Server:
+All comm happen via api server
+exposes RESTful API	
+What input? YAML files  //contains pod definition	
+			  which container, which image, what what to run
+				how to send yaml ? over https  //post method //port 443	
+	  //also called as kubernetes manifest yaml files
+	//Monocole tool helps if dont like to work with yaml files , can create pods etc without working with yaml files
+
+
+b) ETCD:DB Tool : stores configuration info about cluster 			
+
+c) Controller manager:  
+	what are controllers? make sure desired state we want (for ex run 5 pods) , controller does that
+	what are controller managers? takes care of controllers
+		we tell api server, it listens to api server //request 5 pods
+	Controller manager has functionalities:
+		c.1) desired state : what we want
+		c.2) current state : checks what is current state //loops
+		c.3) Differences   : 
+		c.4) make changes :
+	Cloud providers; have their own control managers, for load balancing etc
+
+d) Scheduler
+	what are schedulers? physically schedule objects
+		we tell api server, it listen to api server  //request 5 pods
+	Scheduler will check for healthy nodes, finds best worker node and Schedules on worker node	
+		checks if node has free resources, networking requirements, images for running container are dowloaded?, whats running on node		
+			--> allocates task to node
+	Scheduler criterias
+		d.1) Container creating
+		d,2) Container scheduling
+		d.3) Container pending state		//what if cant find worker node free to do
+	
+	
+e) 

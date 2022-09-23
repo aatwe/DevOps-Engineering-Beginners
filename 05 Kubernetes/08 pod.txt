@@ -1,0 +1,38 @@
+What is pod?
+
+smallest Scheduline unit in kubernetes
+Inside pod we run containers
+
+-Worker node
+--Container runtime (containerd)
+---pod
+----container
+
+
+
+How many container in a pod? good practice 1 container 1 pod 
+
+
+
+Q) How to create pod?
+
+1) Create web application
+
+2) Divide web application into microservices
+
+3)Containerize microservice: Add microservice in its container
+
+4) Put every container in its own pod
+
+5) Deploy pods to controllers in kubernetes
+	What are controllers? loops that watch state of kubernetes cluster, make/request changes where needed
+			each controller tries to move cluster state closer to desired state
+	ex objective: tell kubernetes to always run 5 pods
+		give info to controller
+			which controller? deployment controller  (what is deployment? another type of object)
+				what will controller do? handle to run 5 pods at all times
+						      if one pod goes, it will auto restart it
+				 
+
+
+	

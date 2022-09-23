@@ -1,0 +1,52 @@
+Tools:
+
+
+a) Lens : avoids working with yaml files
+
+
+b) Kubeshop:   Makes it easy to debug and manage manifest files
+		//when yaml files become really big, kubeshop helps to manage
+	
+	Monokle: Kubeshop tool   //can debug kubernetes manifest files
+		->Input: kubeconfig files	/kube/config		//configfiles : contain info relevant to access cluster
+		//if creating cluster on civo --> download kubeconfig file of cluster --> give to friend --> friend can make changes to cluster
+
+		->Show Cluster resources		//nice navigation form view
+			1) DaemonSets
+			2) Deployments
+			3) Pods
+				//Huge file
+			4) Rapid Sets
+			5)Configuration	
+			6) namespaces		
+			7) Secrets
+
+
+
+
+c) Kubescape by Armo : Risk analysis/security compliance/vulnerability scan etcetc
+
+d) Datree:
+		When creating kubernetes manifest files -> we violate some rules
+		How to resolve? create a datree, start for free
+		//we test yaml files in this
+			//tells which test failing , which passed
+
+e) Teleport: Quickly access infra, kubernetes and services, provides dashboard with
+	Kubernets
+	Databases
+	Servers
+	Applications
+	Desktops
+	Activity
+	Team
+
+
+f) civo: CLoud provider, easy to use and cheap
+	specify instances, size
+Marketplace: Featured	Database		Storage	Monitoring	CI/CD 	Management	Architecture	Security
+
+//3node cluster created in 1 min
+//free alternative for learning: minikube
+output: get kube config file -> Save -> Add on lens
+		//find how to attach civo/etc to these tools

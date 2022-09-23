@@ -1,0 +1,23 @@
+What is kubernetes?
+
+use case 1: always 5 application should be running, if any goes down restart -> scheduler does it
+
+
+
+Why  kubernetes = more than container orchestrato?
+
+Kubernetes helps usDeploy, zero downtime features, scale, self Heal 		//Orchestration
+								
++ other features (replicate app, load balancing services)
+//can run kubernetes on own cloud, can run on own machine, can migrate, replicate,scale,zero tolerant, volumes,external storage ,logs, load balancing,service discovery, secret info
+
+
+													
+just tell kubernetes via api to run website application on 2 servers , allocate x memory to it
+
+
+How kubernetes does it? kubernetes problem
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//We only see get request to youtube.com //BTS kubernetes
+Abhilash access youtube.com ----> Kubernetes //finds which server to direct the request to -----> endpoint for our url //ip address allocation
+

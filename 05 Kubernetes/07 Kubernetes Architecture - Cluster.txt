@@ -1,0 +1,30 @@
+1) Kubernetes Cluster
+	Control Plane + Worker Nodes
+
+			   worker node
+			/
+CubeCTL --> Control plane	
+			\
+			  worker node
+
+
+//Kubernetes Cluster = Collection of control plane (called master node earlier)  and worker nodes
+
+
+worker node = where application running
+Control plane = manages worker nodes
+CubeCTL -> Kubernetes CLI //terminal
+Orchestration = managing micro services	
+		where micro services running? worker nodes
+
+Flow:
+CubeCTL --> tells --> Control plane //start 10 applications
+Control plane will look which worker node is empty + handle load --> starts the container
+
+
+How cubectl communicates?
+	1) Declarative
+		Create a manifest file, YAML files code
+	2) Imperative
+		Tell cluster specific commands  //bad //everytime have to write commands
+

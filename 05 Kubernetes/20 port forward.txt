@@ -1,0 +1,18 @@
+1) How to port forward?
+	 we go to port 8080 :80 of local host
+	nginx-pod 8080:80		//nginx runs on port 80
+				//everything is running on top of linux
+				//we can go inside pod and execute linux command
+
+
+2) go to web: localhost:8080
+We can access nginx
+
+
+
+WHAT MAGIC HERE? THIS Nginx is running inside kubernetes inside our pod in a container
+we can see outputs also in terminal -> when we refresh
+
+		//what is inside nginx-pod container?image with OS
+
+//stop in terminal -> wont be able to access

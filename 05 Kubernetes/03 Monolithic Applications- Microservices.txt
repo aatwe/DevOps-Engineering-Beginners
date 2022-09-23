@@ -1,0 +1,40 @@
+Managing containers:
+
+
+1) Monolithic apps: .//Not good design
+	What are monolithic architecture?
+		Website = frontend + backend +  Chat Messages + Database + Networking components
+
+What is bundling? Run everything above in 1 container //Monolithic application architecture
+
+What problem? if want to make change in db, have to deploy everything again
+	           if want to scale, have to scale other application also
++++++++++++++++++++	
+Solution: Microservices
+
++++++++++++++++++++
+How docker solves monolithic apps problems?
+All website components deployed as individual application servers i.e their own containers
+
+Frontend --> S1
+Backend --> S3
+Database --> S2
+Messages -->S2
+Networking -->
+
+
+if want to make change/ scale frontend -> just do on frontend container	//fault isolation
+Also dont have to worry about package managerss
+
+//can divide teams
+___________________________________________________________________________________
+
+Q) Where are microservices run? inside container
+Q) How to manage these separate applications? How will they communicate? //ex 10000 services //complex
+	Service Mesh
+
+_____________________________________________________________________________________________________
+Basic summary:
+One application on 1 VM is not cool for scaling , hence docker
+
+

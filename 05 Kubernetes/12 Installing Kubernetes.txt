@@ -1,0 +1,93 @@
+//kubernetes.io
+
+Objective: Set up a one node minikube cluster. 
+	*cluster : will have 2 cpu and 1 GB memory
+		what is node? virtual machine + server
+	
+
+
+
+
+0) Install Docker desktop
+1) KubeCTL:  Command line tool
+
+
+2) KubeCTL : Install for windows
+
+3) MiniCube : Install via docker desktop //for testing purpose	** FREE
+         prerequisites:	
+	2 CPU or more
+	2 GB of free memory
+	Virtual Machine Manager
+
+4)kube adm : Cloud provider 
+		Why? kubernetes working with multi node infra,
+		cant set up on local system
+			 Civo  //low cost + v fast ()	//civo.com/academy
+			//use minicube for learning			
+
+______________________________________________________________________________
+a) How to check kubectl version
+kubectl version
+OR
+kubectl version --output=yaml
+
+
+
+b) How to create a new minikube cluster?		//check minikube documentation
+	minikube start --				//if using docker driver
+	minikube start --vm-driver=virtualbox		//if using virtual box
+
+
+c) How to start a cluster
+	minikube start
+		//cluster created = control plane + worker node   //single node
+		//allocate reosurces to it (2CPU + 4 GB memory)
+		//pulling images 
+		//creates new virtual machine based on minikube image
+		//installs everything required to run kuberentes (binaries, container runtimes)
+		//checkout minikube stop and delete commands also
+
+d) Check installation status?
+	minikube	 status
+>minikube
+type: Control Plane
+host : Running
+kubelet : Running
+apiserver : Running
+kubeconfig: Configured		//if someone gives you kubeconfig file of kubernetes cluster
+				you can access their kubernetes cluster	
+
+
+
+	
+e) How to check which pods are running
+ kubectl get pods 
+			//no pods running initially 	
+
+f) How to check nodes?
+kubectl get nodes
+>minikube		//only 1 node created : control plane
+
+
+g) Open kubernetes Dashboard
+How to open built in kubernetes dashboard
+>minikube dashboard
+
+//What can we check on kubernetes dashboard?
+Workloads
+a) Deployments
+b) Pods
+c) Replica Sets
+d) Replication  Controllers
+e) jobs
+f) deployments etc
+Services:
+
+a) Ingress		//exposes application
+b) Services	//expose application internally
+
+Config and Storage
+a) Config maps
+b) Secrets
+c) Storage Classes 

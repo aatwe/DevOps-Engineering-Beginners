@@ -1,0 +1,25 @@
+We will go through these individually
+
+
+
+Open kubernetes Dashboard
+How to open built in kubernetes dashboard
+>minikube dashboard
+
+//What can we check on kubernetes dashboard?
+Workloads
+a) Deployments
+b) Pods
+c) Replica Sets
+d) Replication  Controllers
+e) jobs
+f) deployments etc
+Services:
+
+a) Ingress		//exposes application
+b) Services	//expose application internally
+
+Config and Storage
+a) Config maps
+b) Secrets
+c) Storage Classes 

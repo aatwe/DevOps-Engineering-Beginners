@@ -1,0 +1,51 @@
+6) How to see all? pods + services + deployments + replicas	
+kubectl get all
+pods
+        pod/nginx-deploymentt-664ae567...	1.1	Running
+        pod/nginx-deploymentt-643ae567...	1.1	Running
+        pod/nginx-deploymentt-634ae567...	1.1	Running
+        pod/nginx-deploymentt-675ae567...	1.1	Running
+
+//4 pods running
+
+services
+deployments
+							//How are 4 pods running above? we tell deployment
+	deployment.apps/nginx-deployment	4/4		// Here in deployment section, we tell deployment to always have 4 pods ready"
+replicas
+
+Q1) where is deployment in hierarchy?
+
+ deployment 
+     pod 
+       container
+
+Q2) Lets test : What if we try to delete the pod
+a)  kubectl gets 4 pods
+b) delete pod nginx-deploymentt-664ae567...
+	//pod gets deleted
+
+c) kubectl get pods
+	//it started again  *MAGIC* We deleted a pod, but based on rule it started again
+				//control manager always listening to api server
+
+
+
+d) Check our deployments
+	kubectl get deployments
+
+e) Delete deployment
+ kubectl delete deployments nginx-deployment
+	//deployment deleted
+
+f)Check pods again
+	kubectl get pod
+	//
+        pod/nginx-deploymentt-664ae567...	1.1	Terminating
+        pod/nginx-deploymentt-643ae567...	1.1	Terminating
+       pod/nginx-deploymentt-634ae567...	1.1	Terminating
+        pod/nginx-deploymentt-675ae567...	1.1	Terminating  //why? deployment deleted
+
+//Architecture in action
+
+g)

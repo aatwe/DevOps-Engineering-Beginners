@@ -1,0 +1,43 @@
+a) Old
+Mutable
+Changes in infra are maintained with help of software
+earlier done for racks of servers , Mutable
+
+
+b) New
+Now after VM
+Have to do configuration management for VMs
+
+For ex Ansible
+we tell to allocate x ram etc specs
+
+
+What VM offer? Dynamic infrastructure : Scale up/down or divide resources  in same server
+
+b.1) Immutable
+In VM we cannot make changes at runtime : Gives Immutability
+if container running , cant make changes, to make changes have to start new VM 
+Cannot make changes at runtime
+
+
+b.2) Reliability
+If VM is running we cant change
+
+---------------------------------------------------------------------------------------------------------------
+We have so many cloud hosting platforms:
+1) Can run application in cloud
+2) Modern infra are managed based on immutability
+
+-------------------------------------------------------------------------------------------------------------
+What config management tools provide?
+specify what you want in VM : memory
+get the file
+Start the VM
+___________________________________________________________________________________
+What if multiple services with different versions required in a server?
+ex
+python2
+python3
+
+ Package Manager
+____________________________________________________________________________________

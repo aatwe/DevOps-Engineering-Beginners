@@ -1,0 +1,42 @@
+Given:
+Microservices running
+100 containers running
+
+
+A) If more people start using website -> Server load increases 
+	Solution?
+1) Create more applications , distribute load over servers
+
+
+B) What if 200/1000 container get damaged? want to restart them
+C) How to deploy application / update with 0 down time?
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Orchestrators
+What are orchestrators?Kubernetes provide orchestration + Scheduling tools to containers	
+							What scheduler does?
+								use case 1: always 5 application should be running, if any goes down restart -> scheduler does it
+								use case 2: allocate only 2 GB ram to application-> scheduler does it
+
+a) What does Orchestrator do? helps deply and manage application dynamically (on its own)
+	How it does dynamically? KUBERNETES
+	use cases provided:
+	for ex if more people using -> scale up application
+ 	           if something went down -> Restart / heal container	
+
+Kubernetes helps:		//also features of cloud native applications
+-Deploy
+-Zero downtime updates
+-Scale
+-Self Heal containers
+
+What are cloud native apps?
+Applications that follow these principles ---> Applications that run on Kubernetes
+
+
+What is cloud computing?
+Take resources from cloud ; Ram / Server
+
+Q) Can cloud native apps run on cloud computing platforms? Yes , anywhere , even on local system
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Wherever Kubernetes : Can run Cloud native applications 

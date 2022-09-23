@@ -1,0 +1,16 @@
+buy server -> application on server
+new application -> new server
+more cost 
+
+
+sys admins --> handled these servers
+
+then came VM--> Many machines on 1 server -> dont have to buy new servers
+ 
+divide space, allocate  resource + memory use to VMs
+	divide hard disk OS2 on one part , OS2 on 2nd part
+
+
+application will run in containers on host OS using container engine
+________________________________________________________________________
+ 

@@ -1,0 +1,54 @@
+KubeCTL--->    	Control Plane	---->		Worker Node (gets attached to control plane)
+			API Server
+			etcd
+			controller manager
+			scheduler
+
+
+
+ 	           
+//Control	      //Worker node:
+Plane
+API Server <------	Kube - proxy (listens to api server)		
+API Server <------	Kubelet ---   (listens to api server)  //allocates node
+			|
+			V
+		     container runtime //(containerd)
+		        Pod
+		          container
+
+
+a) Kube proxy: Responsible for networking
+		networking part of cluster
+		Helps cluster communicate with outside network
+		gives each worker node unique ip address
+
+b) Kubelet :present on every worker node  
+		when worker node gets attached to control plane, kubelet is installed
+		Kubelet listens to API server
+
+	   What if worker node kublet cant allocate node?
+		Report back to control plane
+		     API Server will work with scheduler and try to schedule since worker node cant schedule
+
+
+c) Container runtime:
+		Does container related things
+			pulling image	
+			pushing image
+			create container out of it
+			stop container
+			destroy container etc
+
+Does Kubernetes support docker?
+used to
+But now docker replaced by cncf
+
+
+Why replaced? Docker does not support  CRI: Container runtime interface
+	            Contained supports
+
+
+
+	
+		 

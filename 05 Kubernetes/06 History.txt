@@ -1,0 +1,16 @@
+0) Google running orchestrators on large scale internally  //Borg & Omega
+
+1) AWS Cloud
+
+2) Open stack:  open source alternative for AWS
+
+3) Google made Kubernetes (K8s) Open source --> donated to cncf(2nd open source after Linux )  //2014
+
+//dont care where your app is running -> aws,google cloud,cbo,digital ocean
+	write your application -> deploy k8s application in various platforms
+
+//kubernetes allows us to use various container runtimes (containerd)
+//
+
+
+

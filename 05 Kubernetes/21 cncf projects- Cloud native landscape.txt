@@ -1,0 +1,57 @@
+Where is kubernetes in cncf cloud native landscape?
+
+
+App Definition and development
+
+a)Database 
+b)Streaming and Messaging
+c)Application Definition and Image build
+d)Continious Integeration and Delivery
+
+
+Orchestration and Management
+a) Scheudling and orchestration
+	KUBERNETES
+b) Coordination and Service Discovery
+c) Remote Procude Call
+d) Service proxxy
+e) API Gateway
+f) Service mesg
+
+
+
+Runtime
+a) Cloud native storage
+b) Container runtime
+c) Cloud Native network
+
+
+Provisioning
+a) Automation and configuration
+b) Container Registry
+c) Security and Compliance
+d) Key management
+
+
+Special:
+1) Kubernetes Certified service provider
+2) Kubernetes training partner
+3) Certified CNS
+
+
+Platform
+1)certified Kubernetes Distribution
+
+2) Certified Kubernetes Hosted
+
+3) Certified Kubernetes Installer
+
+4) pAAS Container service
+
+
+Observability and Analysis
+a) monitoring tools
+b) logging tools
+c) tracing
+d) Chaos engineering
+e) continious optimization

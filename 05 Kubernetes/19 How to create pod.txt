@@ -1,0 +1,69 @@
+1)we saw in  Lens -> Pod template
+	//Kubernetes manifest file  //yaml file
+
+
+apiVersion: v1			// what version of kubernetes api :kubernetes object part of stable release 
+kind: Pod				//What type of resource to create				
+metadata:			//data that helps to identify object uniquely
+  name: nginx-pod
+  labels:
+         app: nginx
+         tier: dev
+spec:				//contain format of object specs
+  containers:			//what type of containers we running in 
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+
+
+2) cd Desktop
+
+3)Desktop cd project
+
+4) touch pod.yaml
+
+5) How to check current pods? kubectl get pods
+//see all pods running   //nginx not running yet
+
+6) How to create object out of this yaml file?
+kubectl create -f pod.yaml	
+kubectl create -f name_of_file.yaml
+
+7) check current pods again
+kubectl get pods
+	//container gets created for nginxpod
+nginx-pod		0/1	ContainerCreating
+
+
+8) check pod information	//ip //node	//where our pod running? on minikube
+kubectl get pod nginx-pod
+Or
+kubectl get pod nginx-pod -o wide
+
+
+kubectl get pod nginx-pod -o yaml		//get information in form of json/yaml
+get pod  nginx-pod -o json			
+
+kubectl describe pod nginx-pod	//events etc, when created etc
+
+//Since where our pod running? on minikube
+
+
+9) How to go inside minikube?
+project minikube ssh
+
+9a) ping the pod
+ping 172.17.0.3		//Since we are inside minikube, can talk to everything inside minikube
+
+
+10) how to export pod?
+kubectle expose pod nginx-pod --type=NodePort --portt=80
+service/nginx-pod exposed
+
+What if we want to access nginx portal on local host?
+//helps access nginx portal on local host  //just like port forwarding in docker	
+	where is nginx portal running? inside container
+	How to access outside the container? forward the port
+	//for later
+

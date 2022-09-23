@@ -1,0 +1,19 @@
+How cluster communicates? Kubernetes Internal DNS service  //based on Core DNS
+
+	Cluster1
+	/           \
+             node1       node2
+           /        \	/      \
+         pod1   pod2  pod3   pod4 //scheduling unit in cuban    //how to scale pods? Deployment
+        /
+   container1
+
+
+What is K8s DNS?
+1) every pod has ip	 
+2) all container and pod can communicate
+
+
+What is DNS?
+	Whenever we create new service	
+	service gets registered to dns

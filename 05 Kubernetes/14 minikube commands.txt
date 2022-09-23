@@ -1,0 +1,55 @@
+1) minikube docker-env
+	//Output: environment variables
+	//why download envt variables? variables required for local docker client to communicate with remote servers
+	//where is docker server running? inside a virtual machine
+	
+
+2) How to check docker containers running
+>docker container ls		//what containers are these? required by kubernetes
+
+
+3) Everything running inside this VMd, is running inside container
+	How can we check it?
+	
+
+a) Check all container running into minCube	
+	minikube ssh
+	docker ps	//list all containers running //where running? inside pods
+
+	1	
+	2
+	3
+	...
+
+b)  Check all pods that are running
+	>kubectl get pods
+What is inside these pods? containers
+
+
+4) kubectl config view	//List all kubeconfig files : info about cluster
+
+5) How to check current context?
+	minikube
+
+
+6) How to see all? pods + services + deployments + replicas	
+kubectl get all
+pods
+        pod/nginx-deploymentt-664ae567...	1.1	Running
+        pod/nginx-deploymentt-643ae567...	1.1	Running
+        pod/nginx-deploymentt-634ae567...	1.1	Running
+        pod/nginx-deploymentt-675ae567...	1.1	Running
+
+//4 pods running
+
+services
+deployments
+							//How are 4 pods running above? we tell deployment
+	deployment.apps/nginx-deployment	4/4		// Here in deployment section, we tell deployment to always have 4 pods ready"
+replicas
+
+7) where is deployment in hierarchy?
+
+ deployment 
+     pod 
+       container

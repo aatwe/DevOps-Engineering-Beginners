@@ -1,0 +1,33 @@
+free
+
+
+1) Lens
+
+Lens 5 ->Clusters -> Minikube -> Double click
+
+
+What will we see?
+1) CPU Memory usage of minikube
+2) Pods running in minikube
+3) Deployments in minikube
+4) Pod information
+4) how to create pods
+
+
+a) Click + icon --> Create resource -> Select pod template
+
+//pod template	//dont have to write down again & again  //can connect pod to online cluster (working with cloud provider : civo/aws/google)
+		//dont have to work with yaml files
+
+apiVersion: v1		
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+
+
