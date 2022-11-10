@@ -1,0 +1,57 @@
+1) Helm Integeration
+
+
+2) GitHooks
+
+
+3) CircleCI
+
+4) GitHub Actions
+
+
+How to work with these things?Setup CI CD Pipeline
+
+
+a) Get Account token	//we know how to get account token
+
+
+b) SET DATREE_TOKEN as a secret or environment variable in config file
+
+   Add datree to your CI script
+
+
+Ex of CI config
+//a) push and pull branches are mentioned
+//b) checks will run when we trying to merge  
+
+
+name: CI
+
+on:
+	   push:
+	 
+		branches: [ main ]
+
+	   pull_requests:
+		
+		branches: [ main ]
+
+
+	   env:
+		DATREE_TOKEN: ${{secrets.DATREE_TOKEN}}			//What is this? Datree token we get from Dashboard
+
+	
+
+        jobs:
+		k8s-policy-check:
+			runs-on: ubuntu-latest
+
+	  steps:	
+		-name: Checkout
+	  	 uses: actions/checkout@v2
+
+	     -name: Install Datree
+		 run:	 curl https://get.datree.io /bin/bash
+
+		-name: Run Datree's policy check
+		 run : datree test ~/.datree/k8s-demo.yaml			//if want to add own policy -> add -b flag

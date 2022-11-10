@@ -1,0 +1,106 @@
+How to test datree? one needs kubernetes config file
+
+//demo kubernetes file
+
+
+cat ~/.datree/k8s-demo.yaml
+
+
+//king : Deployment
+  containers: 
+	 
+	name:  rss-reader
+	...
+
+
+
+
+
+Q1) How datree works?
+	many rules in kubernetes for 
+		containers,workloads,Cronjobs,networking
+		
+	ex of rule: container does not have image tag -> give error
+
+
+
+Q2) Preprovided 30 Datree tools
+
+how to run 30 built in rules?
+
+a) datree test ~/.datree/k8s-demo.yaml
+
+			//What is this? path to the file
+
+
+
+b) what happens? datree is running 30 built in rules
+	where are the rules run? locally
+	why its cool? we didnt set up any cluster / miniKube cluster yet	//deployment phase running
+						
+
+	Check which policy checks worked
+		 which policy checks failed
+
+
+//How datree is validating?
+	a) validate/Checks if correct yaml
+		ex error: no proper indentation / extra bracket etc
+	
+	b) Kubernetes schema validation
+		ex error: change kind: deployment -> something not supported	/ typo
+
+	c) Policy Check:
+
+		c.1) Check if each container's image has tag version		//failed
+
+		//try testing again: ~/.datree/k8s-demo.yaml 
+		//what error? Says the below image does not have a version.	//hence failing
+		image: nginx:latest
+
+
+
+		//How to see in GUI?
+		Datree -> Dashboard -> History			//check which checks failed/ which passed / which file ran/ 	
+		//Can see error: Ensure each container image has a pinned(tag) version
+
+
+		c.2) Ensure each container has configured memory limit
+		Ex. in yaml file : 
+		limits:
+		  cpu: "500m"	//memory limit not provided // cpu limit provided
+
+		c.3) Ensure workload has valid labels
+
+		c.4) Ensure each container has configured liveness probe
+
+
+
+//How to turn off policies?
+dashboard -> policies ->
+	Turn few error ones off
+	Run test again
+	datree test ~/.datree/k8s-demo.yaml
+
+
+
+Q) How is this different from checks provided by kubeCTL?
+	can customize error message
+
+
+
+
+Q) Lets try changing the yaml file
+
+
+1) ~sudo vi ~/.datree/k8s-demo.yaml
+
+2) add a extra {
+
+3) run the test
+datree test ~/.datree/k8s-demo.yaml
+	//why yaml validation first, schema validation second,  policy checks 3rd?  file should be in correct order first
+
+
+ 
+	

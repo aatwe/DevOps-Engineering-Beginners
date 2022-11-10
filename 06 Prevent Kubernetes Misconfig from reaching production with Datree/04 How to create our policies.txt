@@ -1,0 +1,43 @@
+When is creating polciies useful?
+	in our testing environment
+	we want different policy checks
+
+Solution by Datree? Policy management
+
+
+1) can add policies
+	policy with different rules config
+
+2) give use cases custom policies
+
+
+
+How to creat policy?
+
+
+1) policies -> Create policy ->  Give name -> Create -> abhi_test
+
+
+2) abhi_test
+	0/30 rules active
+	//activate whatver rules we want
+	//change to your own message name
+
+
+
+3) How to run our file against this custom policy?
+
+~ datree test ~/.datree/k8s-demo.yaml		//Runs defualt policy datree provides
+
+	
+
+~ datree test ~/.datree/k8s-demo.yaml	-p abhi_test		//Run our own policy
+
+
+
+3 rules are failing
+
+//prints our policy
+
+
+05 How to add rules to our own policy

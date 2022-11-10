@@ -1,0 +1,54 @@
+1) How to implement these changes in CI pipeline?
+
+
+~  datree test ~/.datree/k8s-demo.yaml -p Kunals_Test
+
+
+
+2) How is changes and history etc reflected in dashboard , from our own CLI? token
+
+
+3) What is this? token from our account
+	(profile -> settings -> token)
+
+	What this token does? connects dashboard --> local setup
+
+
+4) Can we get this token from config file?
+	~cat ~/.datree/config.yaml
+
+	>token: fs9f8s9d8f7s9df89etc
+
+
+5) What if we using CI pipeline? 
+	we have to setup installation of datree on someone else's machine on team
+
+	How to setup on his machine?
+	a) Override the new device's account token
+		How to override his/her account token?
+
+		1) export environment variable
+			export DATREE_TOKEN=dfhgfgfghdgf
+
+		
+
+		2) override account token via config file
+			if device ran any policy check from CLI, can override token present in config.yaml file
+
+		~/.datree/config.yaml
+
+
+	Q) What if device never ran policy check before?
+		create a new file in same location //above
+		write inside that file
+
+		~ sudo cat ~/.datree/config.yaml
+		token: gugf9d8fgu9d8fg90
+		
+		//can just add above line in manually created file, if we havent run a checkbefore
+
+	
+		3)Using datree CLI
+
+		~datree config set tokenfu9s8df9s8duyf9s8		//this will replace the token inside config file(~/.datree/config.yaml)
+			

@@ -1,0 +1,68 @@
+What objective: Datree tool
+
+
+
+What challenges faced by kubernetes admins?
+	for ex dev make changes in kubernetes config files while deploying kubernetes objects while working with CI CD pipeline
+
+	
+
+	scenario: pushed config files on github / bitbucket / gitlab repo
+
+	--> Production failed
+
+
+How to figure out misconfigurations in kubernetes manifest files before reaching production?
+DATREE 
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+What is datree? 
+CLI Tool
+
+Supports Kubernetes owners in roles
+
+helps dev prevent making errors in kubernetes config files b4 reaching production
+
+
+for ex
+1) push config files on git repo
+
+2) when running CI CD Checks
+
+	Dev and community notified
+ 
+	before cluster created
+
+	
+RULES:
+
+How it notifies? 30 built in RULES
+
+	for ex : workloads should have valid labels
+		   
+		   each container should have a pinned tag version
+			etc rules
+
+Where to apply these rules? Kubernetes manifest files
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+What will we learn?
+
+
+what features of Datree?	
+	a) Policy management	/ Create your own policy
+	
+	b) use cases for different stage of deployment
+		access token using CI
+
+	c) Supportsd Integerations
+		Helm plugin
+		Git Hooks
+		Circle CI
+		Travis CI
+		Github actions
+		Gitlab CI CD 

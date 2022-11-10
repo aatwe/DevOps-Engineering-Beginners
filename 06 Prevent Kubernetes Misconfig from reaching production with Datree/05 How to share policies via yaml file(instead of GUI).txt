@@ -1,0 +1,52 @@
+0) When it helps? to collaborate
+
+1) How to share our policies with else. (How to use policies via yaml files?)
+
+Policy as code: Uses declarative code to tell actions that we see in UI
+
+
+
+2) 	If Policy as Code: Enabled ->
+
+	How to make changes in policy in account? 
+	Publish a yaml config file		//Policies.yaml		//contains all defined policies
+
+
+	//can only change by yaml file
+	//Similar ex. -> Infrastructure as a code: yaml file with all resources
+
+	//here policies
+
+
+
+How/When it helps?
+	1) setup version controlling
+	2) automation
+	3) pipelines
+
+
+
+How to?
+	1) Settings -> turn on Policy as code
+	2) Download policies.yaml
+
+		//what this file contains? all policies
+		//if dont want any -> policies commented #
+
+
+How to share this file?
+Share this file with anyone using version control -> use policies via yaml file
+
+
+
+How will these changes visible in our own account? publish file
+
+
+How to publish this yaml file? 
+
+datree publish policies.yaml
+
+//Published succesfully
+//out existing policies set up in account are overriden
+
+Check : account -> policies -> readonly mode (//cant change via buttons now) -> reflected		

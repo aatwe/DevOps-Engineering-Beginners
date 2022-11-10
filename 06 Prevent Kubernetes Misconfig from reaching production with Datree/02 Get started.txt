@@ -1,0 +1,13 @@
+Login Install
+
+
+CLI:
+
+~curl https://get.datree.io 
+
+//changes made by GUI -> visible in Local repo realtime
+//connect with token/datree provided us
+
+
+
+~datree config set token gfdfsd7868sfd89
